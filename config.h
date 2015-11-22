@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char font[] = "Liberation Mono:pixelsize=12:antialias=false:autohint=false";
+static char font[] = "Terminus:pixelsize=24:antialias=false:autohint=false";
 static int borderpx = 2;
 static char shell[] = "/bin/sh";
 static char *utmp = NULL;
@@ -61,30 +61,25 @@ static unsigned int tabspaces = 8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
+	"#1C1C1C",  /*  0: black    */
+	"#D81860",  /*  1: red      */
+	"#B7CE42",  /*  2: green    */
+	"#FEA63C",  /*  3: yellow   */
+	"#66AABB",  /*  4: blue     */
+	"#B7416E",  /*  5: magenta  */
+	"#5E7175",  /*  6: cyan     */
+	"#DDEEDD",  /*  7: white    */
+	"#4d4d4d",  /*  8: brblack  */
+	"#F00060",  /*  9: brred    */
+	"#BDE077",  /* 10: brgreen  */
+	"#FFE863",  /* 11: bryellow */
+	"#AACCBB",  /* 12: brblue   */
+	"#BB4466",  /* 13: brmagenta*/
+	"#A3BABF",  /* 14: brcyan   */
+	"#6C887A",  /* 15: brwhite  */
 
-	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
-
+	// 	/* more colors can be added after 255 to use with DefaultXX */
 	[255] = 0,
-
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
 };
 
 
@@ -94,7 +89,7 @@ static const char *colorname[] = {
  */
 static unsigned int defaultfg = 7;
 static unsigned int defaultbg = 0;
-static unsigned int defaultcs = 256;
+static unsigned int defaultcs = 7;
 
 /*
  * Colors used, when the specific fg == defaultfg. So in reverse mode this
